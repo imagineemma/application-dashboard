@@ -1,0 +1,29 @@
+{
+	"name": "backend",
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"build": "tsc",
+		"start": "node dist/index.js"
+	},
+	"dependencies": {
+		"@google-cloud/local-auth": "^3.0.1",
+		"@google/generative-ai": "^0.24.0",
+		"@hono/clerk-auth": "^2.0.0",
+		"@hono/node-server": "^1.14.1",
+		"@hono/zod-validator": "^0.4.3",
+		"@libsql/client": "^0.15.4",
+		"date-fns": "^4.1.0",
+		"dotenv": "^16.5.0",
+		"drizzle-orm": "^0.41.0",
+		"googleapis": "^149.0.0",
+		"hono": "^4.7.11",
+		"zod": "^3.22.3"
+	},
+	"devDependencies": {
+		"@types/node": "^20.11.17",
+		"tsx": "^4.7.1"
+	},
+	"exports": {
+		"./types": "./src/types/route.ts"
+	}
+}

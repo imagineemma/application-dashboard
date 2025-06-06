@@ -1,0 +1,380 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "81b0cde6-cf29-4e70-ac66-b7e93eadfa49",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "job_posting_analyze": {
+      "name": "job_posting_analyze",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "jobs_posting_id": {
+          "name": "jobs_posting_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "posting_language": {
+          "name": "posting_language",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "relocation_available": {
+          "name": "relocation_available",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "language_match": {
+          "name": "language_match",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "key_skills_matched": {
+          "name": "key_skills_matched",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'[]'"
+        },
+        "key_skills_missing": {
+          "name": "key_skills_missing",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'[]'"
+        },
+        "suggestions": {
+          "name": "suggestions",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'[]'"
+        },
+        "overall_match": {
+          "name": "overall_match",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "CURRENT_TIMESTAMP"
+        }
+      },
+      "indexes": {
+        "job_posting_id_idx": {
+          "name": "job_posting_id_idx",
+          "columns": [
+            "jobs_posting_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "job_posting_analyze_jobs_posting_id_job_posting_id_fk": {
+          "name": "job_posting_analyze_jobs_posting_id_job_posting_id_fk",
+          "tableFrom": "job_posting_analyze",
+          "tableTo": "job_posting",
+          "columnsFrom": [
+            "jobs_posting_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "job_posting": {
+      "name": "job_posting",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "location": {
+          "name": "location",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "job_description": {
+          "name": "job_description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "platform": {
+          "name": "platform",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "company_name": {
+          "name": "company_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "company_url": {
+          "name": "company_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "url": {
+          "name": "url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "posting_date": {
+          "name": "posting_date",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "recruiter": {
+          "name": "recruiter",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "applied_at": {
+          "name": "applied_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "rejected_at": {
+          "name": "rejected_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "invited_at": {
+          "name": "invited_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "job_offer_at": {
+          "name": "job_offer_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "failed_interview_at": {
+          "name": "failed_interview_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "apply_comment": {
+          "name": "apply_comment",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "is_deleted": {
+          "name": "is_deleted",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "used_resume_content": {
+          "name": "used_resume_content",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "used_cover_letter_content": {
+          "name": "used_cover_letter_content",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "imagine_application_id": {
+          "name": "imagine_application_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "CURRENT_TIMESTAMP"
+        }
+      },
+      "indexes": {
+        "job_posting_url_unique": {
+          "name": "job_posting_url_unique",
+          "columns": [
+            "url"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "user": {
+      "name": "user",
+      "columns": {
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "gemini_key": {
+          "name": "gemini_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "resume_content_1": {
+          "name": "resume_content_1",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "resume_content_2": {
+          "name": "resume_content_2",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "resume_content_3": {
+          "name": "resume_content_3",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "cover_letter_prompt": {
+          "name": "cover_letter_prompt",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'You are an expert AI career writing assistant specializing in crafting unique, concise, and highly effective cover letter body paragraphs for international job applications, particularly for applicants seeking roles in Germany or Europe. Your sole function is to generate only the body paragraphs of a cover letter, excluding salutations or closings. The output must consist of a maximum of four short paragraphs, be in English, and total 200–250 words.\n\nInputs You Will Receive (in User Prompt):\n- CV Text: The full text of the applicant''s CV.\n- Company Name: The name of the company.\n- Position Title: The specific job title being applied for.\n- Job Description: The full text of the job posting.\n- Additional Information: Extra context or specific points the applicant wants included (e.g., self-taught background, relocation from Iran, multilingual skills).\n\nInstructions for Generating the Cover Letter Body:\n- Comprehensive Analysis: Thoroughly analyze all inputs (CV, Job Description, Company Name, Position Title, Additional Information) to identify key job requirements, applicant qualifications, relevant experiences, and unique context (e.g., self-taught journey, relocation aspirations).\n- Strict Tailoring: Create cover letter body text precisely tailored to the Job Description. Highlight the most relevant skills, experiences, and quantifiable achievements from the CV that directly address the job’s needs, prioritizing technical skills (e.g., TypeScript, React) and measurable outcomes (e.g., performance improvements).\n- Mandatory Structure & Flow (Max 4 Short Paragraphs):\n- Paragraph 1 (Narrative Introduction & Interest): Open with a brief, engaging story from the applicant’s journey (e.g., self-taught coding in a unique setting) to create a memorable hook. Clearly state the Position Title and express specific enthusiasm for the Company Name, incorporating relevant Additional Information (e.g., motivation for applying or connection to job''s location tech scene).\n- Paragraph 2 & 3 (Key Qualifications & Evidence): Use 1–2 paragraphs to provide concrete evidence of suitability. Highlight 2–3 key skills or achievements from the CV (e.g., project outcomes, technical expertise) that match the Job Description’s requirements. Integrate Additional Information (e.g., self-taught resilience, A2 German, relocation commitment) to strengthen context or explain unique qualifications.\n- Paragraph 4 (Concluding Fit & Enthusiasm): Summarize enthusiasm for the role at Company Name and overall fit, emphasizing potential contributions. Subtly reference Additional Information if it aligns with company values, cultural fit, or long-term goals (e.g., integrating into job''s location tech ecosystem).\n\nExtreme Conciseness: Each paragraph must be 2–4 sentences, with the total output not exceeding 250 words. Prioritize impact, brevity, and clarity over lengthy details.\n\nUnique & Warm Tone: Maintain a professional, confident tone with a warm, personal touch that reflects the applicant’s unique journey (e.g., self-taught, multilingual, relocating from Iran). Use storytelling to stand out while remaining relevant to the job.\n\nAction-Oriented Language: Employ strong action verbs and quantify achievements from the CV (e.g., “reduced costs by 63%”) when relevant to the Job Description.\n\nSeamless Integration of Additional Info: Weave Additional Information naturally into paragraphs to enhance relevance (e.g., explaining self-taught skills, multilingual capabilities, or relocation enthusiasm). Do not list it separately.\n\nCultural Fit for Job''s location: Subtly emphasize enthusiasm for Job''s location tech scene and commitment to integration (e.g., language skills, cultural adaptability) to address international applicant challenges.\n\nStrict Exclusion Rules:\n- Do not include placeholders (e.g., ‘[]’, ‘[Your Name]’).\n- Do not mention where the job was found.\n- Do not include salutations (e.g., “Dear Hiring Manager”) or closings (e.g., “Sincerely,” applicant’s name).\n- Output only the body text paragraphs.\n\nOutput Format:Raw text of the cover letter body, formatted as a maximum of four short paragraphs separated by standard newlines. The text must be tailored, concise, professional, in English, referencing the specific Company Name and Position Title (simplified version), and incorporating Additional Information seamlessly. Don''t use buzzwords and don''t make it dramatic and the words should be simple and not fancy (eg. \"honed\", \"thrived\").'"
+        },
+        "resume_google_doc_id": {
+          "name": "resume_google_doc_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "cover_letter_google_doc_id": {
+          "name": "cover_letter_google_doc_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "google_api_credential": {
+          "name": "google_api_credential",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "user_email_unique": {
+          "name": "user_email_unique",
+          "columns": [
+            "email"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

@@ -1,0 +1,91 @@
+Farhad Faraji
+Software Engineer
+
+3 years of experience specializing in Frontend development with a keen interest in Backend technologies. Contributed to developing five production-ready applications serving 3,000+ daily active users. Proficient in JavaScript, TypeScript, and React.js, focusing on optimizing performance and scalability through strategic migrations and code refactoring. Dedicated to continuous learning, problem-solving, and innovation. Fluent in 4 languages with a commitment to expanding expertise.
+
+WORK EXPERIENCE
+______________________________________________________________________
+
+Full Stack Software Engineer	May 2023 – May 2025
+EvaluCar, Paris, France (Remote from Iran)
+
+- Optimized application infrastructure by migrating a React.js front-end and AWS Lambda backend to a full-stack Next.js application on Vercel, reducing monthly operational costs by 63% while maintaining scalability and performance for over 3,000 daily active users.
+- Reduced codebase by 30% and loading time by 0.7 seconds, as measured by Lighthouse, through refactoring web applications from Material UI to Shadcn UI components. 
+- Established and seamlessly deployed an Express.js backend application on AWS cloud infrastructure, ensuring scalability, reliability, and optimal performance in a cloud-native environment.
+- Implemented over 400+ unit tests for the backend using Jest and Vitest, and 100+ End-To-End (E2E) tests for the frontend using Cypress, ensuring application stability and test coverage.
+- Led regular code reviews and debugging sessions for a 5-member team to uphold code quality and facilitate knowledge sharing.
+
+Frontend Developer	January 2022 – May 2023
+Brunny Agency, Iran
+
+- Contributed to successfully delivering 14 projects on schedule, ensuring customer satisfaction by collaborating with a diverse team of 4 and utilizing unique talents in a fast-paced environment.
+- Partnered with UX/UI designers to translate intricate design concepts into responsive web pages, achieving 100% cross-browser compatibility and enhancing user experience.
+- Expanded React Native project functionality by integrating 3 new pages for seamless authentication via SMS, enhancing user security, and access control.
+- Advised back-end developers to ensure seamless integration of RESTful API, WebSocket, and front-end components, enabling robust functionality and data interaction.
+
+VOLUNTEERING
+______________________________________________________________________
+
+Software Developer Mentor	October 2024 – Present
+Chingu, St. Louis, Missouri (Remote from Iran)
+
+- Mentored junior developers in full-stack development and clean coding while leading workshops on modern tools, fostering collaboration, and improving team performance.
+CONTACT
+______________________________
+
+•  Astara, Iran
+•  +98-903-631-2916
+•  farhadham2@gmail.com
+•  linkedin.com/in/farhadfaraji
+•  github.com/farhadham
+•  Open for Relocation
+
+SKILLS
+______________________________
+JavaScript, TypeScript
+HTML5, CSS3
+React.js, Next.js, Vue.js
+Node.js, Deno
+Express.js, Hono, Nest.js
+RESTful, REST API, Microservices
+SQL, PostgreSQL, SQLite
+TailwindCSS, Sass
+Bootstrap, Material UI
+Asynchronous, HTTP, Websockets
+NoSQL, MongoDB
+React Native
+Tanstack React Query
+AWS, Google Cloud
+Docker
+Figma, UI & UX Design
+Redux, Zustand
+OpenAPI, Swagger
+Vite, Webpack
+Three.js
+
+EDUCATION
+______________________________
+University of Tabriz
+Bachelor of Science
+Civil Engineering
+Tabriz, Iran — May 2018
+•  Top 5 Universities in Iran
+•  Total score of 81% (top 10% of class)
+
+LANGUAGES
+_____________________________
+English - Fluent
+Deutsch - A2 (not certified)
+Persian - Native
+Turkish - Fluent
+Azerbaijani - Fluent
+Arabic - Elementary
+
+HOBBIES
+_____________________________
+Language Learning
+Piano
+Esports
+Escape Rooms
+Judo
+

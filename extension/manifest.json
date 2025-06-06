@@ -1,0 +1,14 @@
+{
+	"manifest_version": 3,
+	"name": "Personal Job Assistant",
+	"version": "1.0",
+	"description": "Logs the jobs to Job Assistant app",
+	"permissions": ["activeTab", "scripting", "storage"],
+	"host_permissions": ["http://localhost:3008/*"],
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"service_worker": "background.js"
+	}
+}

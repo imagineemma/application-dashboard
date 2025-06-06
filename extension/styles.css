@@ -1,0 +1,43 @@
+body {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.small-btn {
+  font-size: 12px;
+  background-color: #f0f0f0;
+  color: #333;
+  margin-top: 15px;
+}
+
+.small-btn:hover {
+  background-color: #e0e0e0;
+}
+
+#status {
+  margin-top: 15px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.error {
+  color: #ff0000;
+  background-color: #ffeeee;
+}
+
+.success {
+  color: #009900;
+  background-color: #eeffee;
+}
+
+#actionSection {
+  margin-top: 10px;
+}
+
+.button {
+  border-radius: 4px;
+  padding: 4px;
+}

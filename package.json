@@ -1,0 +1,27 @@
+{
+	"name": "job-assistant",
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"start": "turbo run start",
+		"format-and-lint": "biome check .",
+		"format-and-lint:fix": "biome check . --write",
+		"db:generate": "npm run -w @job-assistant/db db:generate --",
+		"db:drop": "npm run -w @job-assistant/db db:drop",
+		"db:migrate": "npm run -w @job-assistant/db db:migrate"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"turbo": "^2.5.0",
+		"typescript": "5.8.3"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"packageManager": "npm@10.2.5",
+	"workspaces": ["apps/*", "packages/*"],
+	"dependencies": {
+		"axios": "^1.9.0"
+	}
+}

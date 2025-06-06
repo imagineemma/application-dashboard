@@ -1,0 +1,18 @@
+{
+	"name": "@job-assistant/db",
+	"version": "0.0.0",
+	"main": "index.js",
+	"scripts": {
+		"dev": "npx drizzle-kit studio",
+		"start": "npx drizzle-kit studio",
+		"db:generate": "npx drizzle-kit generate --name",
+		"db:drop": "npx drizzle-kit drop",
+		"db:migrate": "npx drizzle-kit migrate"
+	},
+	"devDependencies": {
+		"drizzle-kit": "^0.31.1"
+	},
+	"dependencies": {
+		"drizzle-orm": "^0.41.0"
+	}
+}

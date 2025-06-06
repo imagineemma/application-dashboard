@@ -1,0 +1,26 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.4.1/schema.json",
+	"files": {
+		"ignore": [
+			"dist/**",
+			"build/**",
+			"node_modules/**",
+			".turbo/**",
+			"*.min.js",
+			"**/dist/**",
+			"**/build/**",
+			"**/node_modules/**"
+		]
+	},
+	"linter": {
+		"rules": {
+			"correctness": {
+				"useExhaustiveDependencies": "error",
+				"noUnusedVariables": "error"
+			},
+			"style": {
+				"noNonNullAssertion": "off"
+			}
+		}
+	}
+}
