@@ -38,12 +38,10 @@ export default ImagineDetails;
 
 const getStatusColor = (status: string) => {
 	switch (status) {
-		case "Find better match":
+		case "Recommendation not possible":
 			return "danger";
 		case "Recommended":
 			return "success";
-		case "To be recommended":
-			return "warning";
 		default:
 			return "default";
 	}

@@ -28,7 +28,7 @@ function AppliedComponent() {
 		return () => clearTimeout(handler);
 	}, [searchTerm]);
 
-	const { data, isPending, isError, error } = useQuery({
+	const { data, isPending, isError, error, isFetching } = useQuery({
 		queryKey: ["job-postings", "applied", page, debouncedSearchTerm],
 		queryFn: () =>
 			handleApiResponse(
@@ -37,9 +37,10 @@ function AppliedComponent() {
 				}),
 			),
 		placeholderData: keepPreviousData,
+		refetchOnWindowFocus: false,
 	});
 
-	if (isPending) return <Spinner />;
+	if (isPending || isFetching) return <Spinner />;
 
 	if (isError) return <Alert color="danger" title={error.message} />;
 
