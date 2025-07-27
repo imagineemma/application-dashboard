@@ -50,7 +50,7 @@ Before starting, you need to install Node.js:
 
 5. **Set Up the Database**:
 
-   - Run: `npx drizzle-kit migrate`
+   - Run: `npm run db:migrate`
 
 6. **Build the Application**:
 
