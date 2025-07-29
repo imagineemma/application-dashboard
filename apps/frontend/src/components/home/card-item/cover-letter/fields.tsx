@@ -90,7 +90,7 @@ const Fields = ({ id, companyName }: Props) => {
 				<Radio value="2">Resume 2</Radio>
 				<Radio value="3">Resume 3</Radio>
 			</RadioGroup>
-			<div className="space-y-4">
+			<div className="space-y-4 pb-2">
 				{data ? (
 					<Textarea
 						name="letterContent"

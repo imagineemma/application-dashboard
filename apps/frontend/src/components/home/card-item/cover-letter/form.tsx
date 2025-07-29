@@ -73,7 +73,7 @@ export const CoverLetterForm = ({ id, companyName }: Props) => {
 	return (
 		<Form validationErrors={errors} onSubmit={onSubmit}>
 			<Fields id={id} companyName={companyName} />
-			<div className="space-x-2 py-2 ml-auto">
+			<div className="hidden space-x-2 py-2 ml-auto">
 				<Button type="submit" color="primary" isLoading={isDownloadPending}>
 					Download pdf
 				</Button>

@@ -10,7 +10,7 @@ import type { getJobPostings } from "../../../services/job-posting";
 import PostingCardDetails from "../../common/posting-card-details";
 import { CoverLetter } from "./cover-letter";
 import { DeleteDialog } from "./delete";
-import DownloadResume from "./download-resume";
+// import DownloadResume from "./download-resume";
 import JobDescription from "./job-description";
 import { MarkAsApplied } from "./mark-as-applied";
 import Reanalyze from "./reanalyze";
@@ -20,7 +20,7 @@ export const HomeItemCard = ({
 }: {
 	data: InferResponseType<typeof getJobPostings, 200>[number];
 }) => {
-	const { suggestions, companyName, id, recruiter, url, title } = data;
+	const { suggestions, companyName, id, recruiter, url } = data;
 
 	return (
 		<Card className="border-1 border-divider" shadow="md">
@@ -44,7 +44,7 @@ export const HomeItemCard = ({
 
 			<div className="flex items-end gap-4 p-4">
 				<div className="flex items-center ml-auto gap-2">
-					<DownloadResume title={title} />
+					{/* <DownloadResume title={title} /> */}
 					<Reanalyze id={id} />
 					<CoverLetter id={id} companyName={companyName} />
 					<MarkAsApplied id={id} recruiter={recruiter} />
