@@ -4,7 +4,6 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "npx drizzle-kit studio",
-		"start": "npx drizzle-kit studio",
 		"db:generate": "npx drizzle-kit generate --name",
 		"db:drop": "npx drizzle-kit drop",
 		"db:migrate": "npx drizzle-kit migrate"
