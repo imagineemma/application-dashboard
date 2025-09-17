@@ -2,12 +2,17 @@
 	const ALERT_MSG =
 		"Website has been changed. Please contact farhadham2@gmail.com for new updates.";
 
-	const getTextContent = (selector) => {
-		const element = document.querySelector(selector);
-		if (!element) {
-			return undefined;
+	const getTextContent = (selectors) => {
+		// If a single string is passed, convert it to an array
+		const selectorArray = Array.isArray(selectors) ? selectors : [selectors];
+
+		for (const selector of selectorArray) {
+			const element = document.querySelector(selector);
+			if (element && element.textContent.trim()) {
+				return element.textContent.trim();
+			}
 		}
-		return element.textContent.trim();
+		return undefined;
 	};
 
 	const getElementByIndex = (selector, index = 0) => {
@@ -22,18 +27,21 @@
 	const url = window.location.href;
 
 	// Posting date
-	const postingDateText = getTextContent(
+	const postingDateText = getTextContent([
 		"[data-testid='job-details-published-date']",
-	);
+	]);
 	const postingDate = postingDateText
 		? relativeTimeToISO(postingDateText)
 		: undefined;
 
 	// Location
-	const location = getTextContent("[data-testid='job-fact-location']");
+	const location = getTextContent([
+		"[data-testid='job-fact-location']",
+		"#content > section > div.job-details-content-styles__Container-sc-6be84ebf-0.gvDJCb > div.header-styles__StyledHeader-sc-476f25e0-0.lliUjy > div.job-intro__CompanyInfo-sc-5658992b-2.bQfWYb > div > p",
+	]);
 
 	// Job Title
-	const title = getTextContent("[data-testid='job-details-title'] > h1");
+	const title = getTextContent(["[data-testid='job-details-title'] > h1"]);
 
 	// Job Description
 	const jobDescription = getElementByIndex(
@@ -42,9 +50,9 @@
 	);
 
 	// Company Name
-	const companyName = getTextContent(
+	const companyName = getTextContent([
 		"[data-testid='job-details-company-info-name']",
-	);
+	]);
 
 	// ✅ Collect all required variables before creating `data`
 	const requiredVars = {
@@ -55,6 +63,7 @@
 		postingDate,
 		location,
 	};
+
 	const missing = Object.entries(requiredVars)
 		.filter(([_, value]) => !value)
 		.map(([key]) => key);
@@ -100,7 +109,6 @@
 
 function relativeTimeToISO(relativeTime) {
 	const now = new Date();
-
 	const match = relativeTime.match(
 		/(\d+)\s*(minute|minutes|hour|hours|day|days|week|weeks|month|months|year|years)\s+ago/,
 	);
@@ -131,9 +139,7 @@ function relativeTimeToISO(relativeTime) {
 			default:
 				return undefined;
 		}
-
 		return now.toISOString();
 	}
-
 	return undefined;
 }
