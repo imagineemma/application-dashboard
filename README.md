@@ -70,10 +70,15 @@ When you pull new updates from the repository:
 
 2. **Run database migrations**:
 
-   - Run: `npx drizzle-kit migrate`
+   - Run: `npm run db:migrate`
    - This will apply any new database changes
 
-3. **Rebuild and restart**:
+3. **Run database migrations**:
+
+   - Type `chrome://extensions/` in your Chrome browser address bar
+   - click on reload button of the extension to reload it with new updates
+
+4. **Rebuild and restart**:
    - Run: `npm run build`
    - Run: `npm run start`
 
