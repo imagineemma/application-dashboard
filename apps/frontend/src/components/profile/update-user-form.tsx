@@ -21,9 +21,9 @@ type Props = {
 const formSchema = z.object({
 	email: z.string().email(),
 	name: z.string().min(1),
-	resumeContent1: z.string().min(1500).max(5000),
-	resumeContent2: z.string().max(5000).or(z.literal("")),
-	resumeContent3: z.string().max(5000).or(z.literal("")),
+	resumeContent1: z.string().min(1500).max(10000),
+	resumeContent2: z.string().max(10000).or(z.literal("")),
+	resumeContent3: z.string().max(10000).or(z.literal("")),
 	geminiKey: z.string().min(10),
 	coverLetterPrompt: z.string().min(100),
 	coverLetterGoogleDocId: z.string(),
@@ -115,7 +115,7 @@ export const UpdateUserForm = ({ user }: Props) => {
 					defaultValue={user?.resumeContent1 || ""}
 					labelPlacement="outside"
 					label="Resume content"
-					placeholder="Your resume content between 1500 to 5000 characters"
+					placeholder="Your resume content between 1500 to 10000 characters"
 					type="text"
 					isRequired
 					variant="bordered"
@@ -126,7 +126,7 @@ export const UpdateUserForm = ({ user }: Props) => {
 					defaultValue={user?.resumeContent2 || ""}
 					labelPlacement="outside"
 					label="Resume content"
-					placeholder="Your resume content between 1500 to 5000 characters"
+					placeholder="Your resume content between 1500 to 10000 characters"
 					type="text"
 					variant="bordered"
 				/>
@@ -136,7 +136,7 @@ export const UpdateUserForm = ({ user }: Props) => {
 					defaultValue={user?.resumeContent3 || ""}
 					labelPlacement="outside"
 					label="Resume content"
-					placeholder="Your resume content between 1500 to 5000 characters"
+					placeholder="Your resume content between 1500 to 10000 characters"
 					type="text"
 					variant="bordered"
 				/>
