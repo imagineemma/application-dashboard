@@ -51,7 +51,6 @@
 
 	let companyName, companyUrl;
 	if (!companyElement) {
-		alert(ALERT_MSG);
 	} else {
 		companyName = companyElement.textContent.trim();
 		companyUrl = companyElement.getAttribute("href")?.replace(/\/life\/?$/, "");
