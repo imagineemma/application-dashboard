@@ -1,24 +1,34 @@
 {
-	"name": "job-assistant-imagine",
-	"private": true,
-	"scripts": {
-		"build": "turbo run build",
-		"dev": "turbo run dev",
-		"start": "turbo run start",
-		"format-and-lint": "biome check .",
-		"format-and-lint:fix": "biome check . --write",
-		"db:generate": "npm run -w @job-assistant/db db:generate --",
-		"db:drop": "npm run -w @job-assistant/db db:drop",
-		"db:migrate": "npm run -w @job-assistant/db db:migrate"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"turbo": "^2.5.0",
-		"typescript": "5.8.3"
-	},
-	"engines": {
-		"node": ">=18"
-	},
-	"packageManager": "npm@10.2.5",
-	"workspaces": ["apps/*", "packages/*"]
+  "name": "job-assistant-imagine",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "start": "turbo run start",
+    "format-and-lint": "biome check .",
+    "format-and-lint:fix": "biome check . --write",
+    "db:generate": "npm run -w @job-assistant/db db:generate --",
+    "db:drop": "npm run -w @job-assistant/db db:drop",
+    "db:migrate": "npm run -w @job-assistant/db db:migrate",
+    "setup": "npm run setup:install && npm run setup:migrate && npm run setup:build",
+    "setup:pull": "git pull",
+    "setup:install": "npm install",
+    "setup:migrate": "npm run db:migrate",
+    "setup:build": "npm run build",
+    "start:full": "npm run setup && npm start",
+    "fresh-start": "npm run setup:pull && npm run setup && npm start"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "turbo": "^2.5.0",
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@10.2.5",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
