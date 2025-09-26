@@ -14,9 +14,9 @@ const app = new Hono().basePath("/api");
 app.use(
 	"*",
 	cors({
-		origin: ["http://localhost:3007"],
+		origin: "*",
 		exposeHeaders: ["Content-Disposition"],
-	}),
+	})
 );
 app.use(logger());
 
