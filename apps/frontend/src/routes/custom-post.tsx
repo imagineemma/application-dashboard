@@ -133,7 +133,7 @@ function CustomPostPage() {
 
 const formSchema = z.object({
 	companyName: z.string(),
-	companyUrl: z.string().url().or(z.literal("")),
+	companyUrl: z.union([z.literal(""), z.string().url()]),
 	location: z.string(),
 	title: z.string(),
 	jobDescription: z.string().min(100).max(9999),
