@@ -11,7 +11,7 @@ export const jobPostingIdSchema = z.object({
 
 export const createJobPostingRequestSchema = z.object({
 	companyName: z.string().trim(),
-	companyUrl: z.string().trim(),
+	companyUrl: z.string().trim().optional(),
 	location: z.string().trim(),
 	title: z.string().trim(),
 	jobDescription: z.string().trim(),
