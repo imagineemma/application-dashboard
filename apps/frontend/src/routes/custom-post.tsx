@@ -92,7 +92,6 @@ function CustomPostPage() {
 					label="Location"
 					placeholder="Country, City"
 					type="text"
-					isRequired
 				/>
 				<Input
 					name="platform"
@@ -100,7 +99,7 @@ function CustomPostPage() {
 					label="Job platform"
 					placeholder="Linkedin"
 					type="text"
-					isRequired
+			
 				/>
 				<Input
 					name="recruiter"

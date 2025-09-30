@@ -12,10 +12,10 @@ export const jobPostingIdSchema = z.object({
 export const createJobPostingRequestSchema = z.object({
 	companyName: z.string().trim(),
 	companyUrl: z.string().trim().optional(),
-	location: z.string().trim(),
+	location: z.string().trim().transform(value => value || "Location not specified"),
 	title: z.string().trim(),
 	jobDescription: z.string().trim(),
-	platform: z.string().trim(),
+	platform: z.string().trim().transform(value => value || "Custom"),
 	url: z.string().trim().url(),
 	postingDate: z.string().datetime().optional(),
 	recruiter: z.string().trim().optional(),
