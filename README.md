@@ -73,7 +73,7 @@ When you pull new updates from the repository:
    - Run: `npm run db:migrate`
    - This will apply any new database changes
 
-3. **Run database migrations**:
+3. **Update the chrome extension**:
 
    - Type `chrome://extensions/` in your Chrome browser address bar
    - click on reload button of the extension to reload it with new updates
