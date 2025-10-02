@@ -62,25 +62,7 @@ Before starting, you need to install Node.js:
 
 ### Updating the Application
 
-When you pull new updates from the repository:
-
-1. **Install any new dependencies**:
-
-   - Run: `npm install`
-
-2. **Run database migrations**:
-
-   - Run: `npm run db:migrate`
-   - This will apply any new database changes
-
-3. **Run database migrations**:
-
-   - Type `chrome://extensions/` in your Chrome browser address bar
-   - click on reload button of the extension to reload it with new updates
-
-4. **Rebuild and restart**:
-   - Run: `npm run build`
-   - Run: `npm run start`
+You can simply run `npm run fresh-start` if you have cloned the repo using git
 
 ### Installing the Chrome Extension
 
