@@ -11,18 +11,8 @@ export const selectUser = async () => {
 };
 
 export const updateUser = async (payload: UpdateUserRequestType) => {
-	const existing = await db
-		.select()
-		.from(userTable)
-		.then((rows) => rows.at(0));
-
-	if (!existing) {
-		// No user yet → just insert
-		return db.insert(userTable).values(payload);
-	}
-	// Update the existing single user safely
-	return db
-		.update(userTable)
-		.set(payload)
-		.where(eq(userTable.email, existing.email));
+	return db.transaction(async (tx) => {
+		await tx.delete(userTable);
+		await tx.insert(userTable).values(payload);
+	});
 };
