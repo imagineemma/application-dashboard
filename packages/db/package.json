@@ -5,7 +5,8 @@
 	"scripts": {
 		"db:generate": "npx drizzle-kit generate --name",
 		"db:drop": "npx drizzle-kit drop",
-		"db:migrate": "npx drizzle-kit migrate"
+		"db:migrate": "npx drizzle-kit migrate",
+		"db:studio": "npx drizzle-kit studio"
 	},
 	"devDependencies": {
 		"drizzle-kit": "^0.31.1"
