@@ -1,4 +1,3 @@
-import { eq } from "drizzle-orm";
 import { userTable } from "../../database/schema";
 import { db } from "../../utils/db";
 import type { UpdateUserRequestType } from "./validators";
