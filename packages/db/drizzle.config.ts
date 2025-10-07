@@ -1,10 +1,11 @@
 import { defineConfig } from "drizzle-kit";
 import "dotenv/config";
+import path from "node:path";
 
 export default defineConfig({
 	dialect: "sqlite",
-	schema: "../../apps/backend/src/database/schema.ts",
+	schema: path.join(__dirname, "../../apps/backend/src/database/schema.ts"),
 	dbCredentials: {
-		url: "../../database.db",
+		url: `file:${path.join(__dirname, "../../database.db")}`,
 	},
 });
