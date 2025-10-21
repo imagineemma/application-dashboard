@@ -46,7 +46,7 @@ Before starting, you need to install Node.js:
 3. **Install Dependencies**:
 
    - Run: `npm install`
-   - Wait for all packages to be installed
+   - This command might fail due to a dependency conflict. If it does, please run `npm install --legacy-peer-deps` instead. This will install the dependencies using an older, more lenient dependency resolution strategy, which is necessary for this project at the moment.
 
 5. **Set Up the Database**:
 
