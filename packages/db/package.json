@@ -9,7 +9,7 @@
 		"db:studio": "npx drizzle-kit studio"
 	},
 	"devDependencies": {
-		"drizzle-kit": "^0.31.1"
+		"drizzle-kit": "^0.31.5"
 	},
 	"dependencies": {
 		"drizzle-orm": "^0.41.0"
