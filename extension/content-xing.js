@@ -60,7 +60,6 @@
 		title,
 		jobDescription,
 		companyName,
-		postingDate,
 		location,
 	};
 
